@@ -8,48 +8,48 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/adxl362/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-The ADXL362 is an ultralow power, 3-axis MEMS accelerometer that consumes less than 2 μA at a 100 Hz output data rate and 270 nA when in motion triggered wake-up mode. Unlike accelerometers that use power duty cycling to achieve low power consumption, the ADXL362 does not alias input signals by undersampling; it samples the full bandwidth of the sensor at all data rates.The ADXL362 always provides 12-bit output resolution; 8-bit formatted data is also provided for more efficient single-byte transfers when a lower resolution is sufficient. Measurement ranges of ±2 g, ±4 g, and ±8 g are available, with a resolution of 1 mg/LSB on the ±2 g range. For applications where a noise level lower than the normal 550 μg/√Hz of the ADXL362 is desired, either of two lower noise modes (down to 175 μg/√Hz typical) can be selected at minimal increase in supply current.In addition to its ultralow power consumption, the ADXL362 has many features to enable true system level power reduction. It includes a deep multimode output FIFO, a built-in micropower temperature sensor, and several activity detection modes including adjustable threshold sleep and wake-up operation that can run as low as 270 nA at a 6 Hz (approximate) measurement rate. A pin output is provided to directly control an external switch when activity is detected, if desired. In addition, the ADXL362 has provisions for external control of sampling time and/or an external clock.
+ADXL362是一款超低功耗的3轴MEMS加速度计，在100 Hz输出数据速率下消耗小于2μA，在运动触发唤醒模式下消耗270 nA。与使用功率占空比循环来实现低功耗的加速计不同，ADXL362不会通过欠采样来混淆输入信号；ADXL362始终提供12位输出分辨率；当较低分辨率足够时，还提供8位格式化数据用于更有效的单字节传输。测量范围为±2 g、±4 g和±8 g，在±2 g范围内分辨率为1 mg/LSB。对于需要低于ADXL362正常550μg/√Hz噪声水平的应用，可以在电源电流最小增加的情况下选择两种较低噪声模式中的一种（典型值为175μg/√赫兹）。除了超低功耗外，ADXL362还具有许多功能，可实现真正的系统级功率降低。它包括一个深度多模输出FIFO、一个内置微功率温度传感器和多种活动检测模式，包括可调阈值睡眠和唤醒操作，在6Hz（近似）测量速率下，可低至270nA。如果需要，当检测到活动时，提供引脚输出以直接控制外部开关。此外，ADXL362还提供了采样时间和外部时钟的外部控制。
 
-LibDriver ADXL362 is the full function driver of adxl362 launched by LibDriver. It provides acceleration reading, acceleration FIFO mode acquisition, activity /inactivity state detection and other functions. LibDriver is MISRA compliant.
+LibDriver ADXL362是LibDriver推出的ADXL362全功能驱动，该驱动提供加速度读取、加速度FIFO模式采集、运动非运动状态检测等功能并且它符合MISRA标准。
 
-### Table of Contents
+### 目录
 
-  - [Instruction](#Instruction)
-  - [Install](#Install)
-  - [Usage](#Usage)
+  - [说明](#说明)
+  - [安装](#安装)
+  - [使用](#使用)
     - [example basic](#example-basic)
     - [example fifo](#example-fifo)
     - [example motion](#example-motion)
-  - [Document](#Document)
-  - [Contributing](#Contributing)
-  - [License](#License)
-  - [Contact Us](#Contact-Us)
+  - [文档](#文档)
+  - [贡献](#贡献)
+  - [版权](#版权)
+  - [联系我们](#联系我们)
 
-### Instruction
+### 说明
 
-/src includes LibDriver ADXL362 source files.
+/src目录包含了LibDriver ADXL362的源文件。
 
-/interface includes LibDriver ADXL362 SPI platform independent template.
+/interface目录包含了LibDriver ADXL362与平台无关的SPI总线模板。
 
-/test includes LibDriver ADXL362 driver test code and this code can test the chip necessary function simply.
+/test目录包含了LibDriver ADXL362驱动测试程序，该程序可以简单的测试芯片必要功能。
 
-/example includes LibDriver ADXL362 sample code.
+/example目录包含了LibDriver ADXL362编程范例。
 
-/doc includes LibDriver ADXL362 offline document.
+/doc目录包含了LibDriver ADXL362离线文档。
 
-/datasheet includes ADXL362 datasheet.
+/datasheet目录包含了ADXL362数据手册。
 
-/project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
+/project目录包含了常用Linux与单片机开发板的工程样例。所有工程均采用shell脚本作为调试方法，详细内容可参考每个工程里面的README.md。
 
-/misra includes the LibDriver MISRA code scanning results.
+/misra目录包含了LibDriver MISRA代码扫描结果。
 
-### Install
+### 安装
 
-Reference /interface SPI platform independent template and finish your platform SPI driver.
+参考/interface目录下与平台无关的SPI总线模板，完成指定平台的SPI总线驱动。
 
-Add /src, /interface and /example to your project.
+将/src目录，/interface目录和/example目录加入工程。
 
-### Usage
+### 使用
 
 #### example basic
 
@@ -349,60 +349,28 @@ g_gpio_irq = NULL;
 return 0;
 ```
 
-### Document
+### 文档
 
-Online documents: [https://www.libdriver.com/docs/adxl362/index.html](https://www.libdriver.com/docs/adxl362/index.html).
+在线文档: [https://www.libdriver.com/docs/adxl362/index.html](https://www.libdriver.com/docs/adxl362/index.html)。
 
-Offline documents: /doc/html/index.html.
+离线文档: /doc/html/index.html。
 
-### Contributing
+### 贡献
 
-Please refer to CONTRIBUTING.md.
+请参考CONTRIBUTING.md。
 
-### License
+### 版权
 
-Copyright (c) 2015 - present LibDriver All rights reserved
+版权 (c) 2015 - 现在 LibDriver 版权所有
 
+MIT 许可证（MIT）
 
+特此免费授予任何获得本软件副本和相关文档文件（下称“软件”）的人不受限制地处置该软件的权利，包括不受限制地使用、复制、修改、合并、发布、分发、转授许可和/或出售该软件副本，以及再授权被配发了本软件的人如上的权利，须在下列条件下：
 
-The MIT License (MIT) 
+上述版权声明和本许可声明应包含在该软件的所有副本或实质成分中。
 
+本软件是“如此”提供的，没有任何形式的明示或暗示的保证，包括但不限于对适销性、特定用途的适用性和不侵权的保证。在任何情况下，作者或版权持有人都不对任何索赔、损害或其他责任负责，无论这些追责来自合同、侵权或其它行为中，还是产生于、源于或有关于本软件以及本软件的使用或其它处置。
 
+### 联系我们
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-
-of this software and associated documentation files (the "Software"), to deal
-
-in the Software without restriction, including without limitation the rights
-
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-
-copies of the Software, and to permit persons to whom the Software is
-
-furnished to do so, subject to the following conditions: 
-
-
-
-The above copyright notice and this permission notice shall be included in all
-
-copies or substantial portions of the Software. 
-
-
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-
-SOFTWARE. 
-
-### Contact Us
-
-Please sent an e-mail to lishifenging@outlook.com.
+请联系lishifenging@outlook.com。

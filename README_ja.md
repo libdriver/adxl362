@@ -8,48 +8,48 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/adxl362/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-The ADXL362 is an ultralow power, 3-axis MEMS accelerometer that consumes less than 2 μA at a 100 Hz output data rate and 270 nA when in motion triggered wake-up mode. Unlike accelerometers that use power duty cycling to achieve low power consumption, the ADXL362 does not alias input signals by undersampling; it samples the full bandwidth of the sensor at all data rates.The ADXL362 always provides 12-bit output resolution; 8-bit formatted data is also provided for more efficient single-byte transfers when a lower resolution is sufficient. Measurement ranges of ±2 g, ±4 g, and ±8 g are available, with a resolution of 1 mg/LSB on the ±2 g range. For applications where a noise level lower than the normal 550 μg/√Hz of the ADXL362 is desired, either of two lower noise modes (down to 175 μg/√Hz typical) can be selected at minimal increase in supply current.In addition to its ultralow power consumption, the ADXL362 has many features to enable true system level power reduction. It includes a deep multimode output FIFO, a built-in micropower temperature sensor, and several activity detection modes including adjustable threshold sleep and wake-up operation that can run as low as 270 nA at a 6 Hz (approximate) measurement rate. A pin output is provided to directly control an external switch when activity is detected, if desired. In addition, the ADXL362 has provisions for external control of sampling time and/or an external clock.
+ADXL362 は超低消費電力の 3 軸 MEMS 加速度センサーで、消費電力は 100 Hz の出力データ レートで 2 μA 未満、モーション トリガー ウェイクアップ モードでは 270 nA です。 パワー デューティ サイクリングを使用して低消費電力を実現する加速度計とは異なり、ADXL362 はアンダーサンプリングによって入力信号をエイリアシングしません。 すべてのデータ レートでセンサーの全帯域幅をサンプリングします。ADXL362 は常に 12 ビットの出力分解能を提供します。 より低い解像度で十分な場合、より効率的なシングルバイト転送のために、8 ビット形式のデータも提供されます。 ±2 g、±4 g、および ±8 g の測定範囲が利用可能で、±2 g 範囲で 1 mg/LSB の分解能があります。 ADXL362 の通常の 550 μg/√Hz よりも低いノイズ レベルが必要なアプリケーションでは、供給電流の増加を最小限に抑えて、2 つの低ノイズ モード (標準で 175 μg/√Hz まで) のいずれかを選択できます。 超低消費電力の ADXL362 には、真のシステム レベルの電力削減を可能にする多くの機能があります。 これには、ディープ マルチモード出力 FIFO、内蔵のマイクロパワー温度センサー、および 6 Hz (概算) 測定レートで 270 nA という低さで実行できる調整可能なしきい値のスリープおよびウェイクアップ動作を含むいくつかのアクティビティ検出モードが含まれています。 必要に応じて、アクティビティが検出されたときに外部スイッチを直接制御するためのピン出力が提供されます。 さらに、ADXL362 には、サンプリング時間および/または外部クロックの外部制御機能があります。
 
-LibDriver ADXL362 is the full function driver of adxl362 launched by LibDriver. It provides acceleration reading, acceleration FIFO mode acquisition, activity /inactivity state detection and other functions. LibDriver is MISRA compliant.
+LibDriver ADXL362 は、LibDriver によって起動される adxl362 のフル機能ドライバーです。 アクセラレーションの読み取り、アクセラレーション FIFO モードの取得、アクティブ/非アクティブ状態の検出などの機能を提供します。 LibDriver は MISRA 準拠です。
 
-### Table of Contents
+### 目次
 
-  - [Instruction](#Instruction)
-  - [Install](#Install)
-  - [Usage](#Usage)
+  - [説明](#説明)
+  - [インストール](#インストール)
+  - [使用](#使用)
     - [example basic](#example-basic)
     - [example fifo](#example-fifo)
     - [example motion](#example-motion)
-  - [Document](#Document)
-  - [Contributing](#Contributing)
-  - [License](#License)
-  - [Contact Us](#Contact-Us)
+  - [ドキュメント](#ドキュメント)
+  - [貢献](#貢献)
+  - [著作権](#著作権)
+  - [連絡して](#連絡して)
 
-### Instruction
+### 説明
 
-/src includes LibDriver ADXL362 source files.
+/ srcディレクトリには、LibDriver ADXL362のソースファイルが含まれています。
 
-/interface includes LibDriver ADXL362 SPI platform independent template.
+/ interfaceディレクトリには、LibDriver ADXL362用のプラットフォームに依存しないSPIバステンプレートが含まれています。
 
-/test includes LibDriver ADXL362 driver test code and this code can test the chip necessary function simply.
+/ testディレクトリには、チップの必要な機能を簡単にテストできるLibDriver ADXL362ドライバーテストプログラムが含まれています。
 
-/example includes LibDriver ADXL362 sample code.
+/ exampleディレクトリには、LibDriver ADXL362プログラミング例が含まれています。
 
-/doc includes LibDriver ADXL362 offline document.
+/ docディレクトリには、LibDriver ADXL362オフラインドキュメントが含まれています。
 
-/datasheet includes ADXL362 datasheet.
+/ datasheetディレクトリには、ADXL362データシートが含まれています。
 
-/project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
+/ projectディレクトリには、一般的に使用されるLinuxおよびマイクロコントローラー開発ボードのプロジェクトサンプルが含まれています。 すべてのプロジェクトは、デバッグ方法としてシェルスクリプトを使用しています。詳細については、各プロジェクトのREADME.mdを参照してください。
 
-/misra includes the LibDriver MISRA code scanning results.
+/ misraはLibDriver misraコードスキャン結果を含む。
 
-### Install
+### インストール
 
-Reference /interface SPI platform independent template and finish your platform SPI driver.
+/ interfaceディレクトリにあるプラットフォームに依存しないSPIバステンプレートを参照して、指定したプラットフォームのSPIバスドライバを完成させます。
 
-Add /src, /interface and /example to your project.
+/ srcディレクトリ、/ interfaceディレクトリ、および/exampleディレクトリをプロジェクトに追加します。
 
-### Usage
+### 使用
 
 #### example basic
 
@@ -106,7 +106,7 @@ return 0;
 
 #### example fifo
 
-```C
+```c
 #include "driver_adxl362_fifo.h"
 
 uint8_t res;
@@ -349,60 +349,28 @@ g_gpio_irq = NULL;
 return 0;
 ```
 
-### Document
+### ドキュメント
 
-Online documents: [https://www.libdriver.com/docs/adxl362/index.html](https://www.libdriver.com/docs/adxl362/index.html).
+オンラインドキュメント: [https://www.libdriver.com/docs/adxl362/index.html](https://www.libdriver.com/docs/adxl362/index.html)。
 
-Offline documents: /doc/html/index.html.
+オフラインドキュメント: /doc/html/index.html。
 
-### Contributing
+### 貢献
 
-Please refer to CONTRIBUTING.md.
+CONTRIBUTING.mdを参照してください。
 
-### License
+### 著作権
 
-Copyright (c) 2015 - present LibDriver All rights reserved
+著作権（c）2015-今 LibDriver 全著作権所有
 
+MITライセンス（MIT）
 
+このソフトウェアおよび関連するドキュメントファイル（「ソフトウェア」）のコピーを取得した人は、無制限の使用、複製、変更、組み込み、公開、配布、サブライセンスを含む、ソフトウェアを処分する権利を制限なく付与されます。ソフトウェアのライセンスおよび/またはコピーの販売、および上記のようにソフトウェアが配布された人の権利のサブライセンスは、次の条件に従うものとします。
 
-The MIT License (MIT) 
+上記の著作権表示およびこの許可通知は、このソフトウェアのすべてのコピーまたは実体に含まれるものとします。
 
+このソフトウェアは「現状有姿」で提供され、商品性、特定目的への適合性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証もありません。 いかなる場合も、作者または著作権所有者は、契約、不法行為、またはその他の方法で、本ソフトウェアおよび本ソフトウェアの使用またはその他の廃棄に起因または関連して、請求、損害、またはその他の責任を負わないものとします。
 
+### 連絡して
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-
-of this software and associated documentation files (the "Software"), to deal
-
-in the Software without restriction, including without limitation the rights
-
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-
-copies of the Software, and to permit persons to whom the Software is
-
-furnished to do so, subject to the following conditions: 
-
-
-
-The above copyright notice and this permission notice shall be included in all
-
-copies or substantial portions of the Software. 
-
-
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-
-SOFTWARE. 
-
-### Contact Us
-
-Please sent an e-mail to lishifenging@outlook.com.
+お問い合わせくださいlishifenging@outlook.com。

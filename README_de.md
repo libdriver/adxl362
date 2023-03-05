@@ -6,50 +6,50 @@
 
 ## LibDriver ADXL362
 
-[![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/adxl362/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
+[![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/adxl362/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE) 
 
-The ADXL362 is an ultralow power, 3-axis MEMS accelerometer that consumes less than 2 μA at a 100 Hz output data rate and 270 nA when in motion triggered wake-up mode. Unlike accelerometers that use power duty cycling to achieve low power consumption, the ADXL362 does not alias input signals by undersampling; it samples the full bandwidth of the sensor at all data rates.The ADXL362 always provides 12-bit output resolution; 8-bit formatted data is also provided for more efficient single-byte transfers when a lower resolution is sufficient. Measurement ranges of ±2 g, ±4 g, and ±8 g are available, with a resolution of 1 mg/LSB on the ±2 g range. For applications where a noise level lower than the normal 550 μg/√Hz of the ADXL362 is desired, either of two lower noise modes (down to 175 μg/√Hz typical) can be selected at minimal increase in supply current.In addition to its ultralow power consumption, the ADXL362 has many features to enable true system level power reduction. It includes a deep multimode output FIFO, a built-in micropower temperature sensor, and several activity detection modes including adjustable threshold sleep and wake-up operation that can run as low as 270 nA at a 6 Hz (approximate) measurement rate. A pin output is provided to directly control an external switch when activity is detected, if desired. In addition, the ADXL362 has provisions for external control of sampling time and/or an external clock.
+Der ADXL362 ist ein extrem stromsparender 3-Achsen-MEMS-Beschleunigungsmesser, der weniger als 2 μA bei einer Ausgangsdatenrate von 100 Hz und 270 nA im bewegungsgesteuerten Weckmodus verbraucht. Im Gegensatz zu Beschleunigungsmessern, die Power Duty Cycling verwenden, um einen geringen Stromverbrauch zu erreichen, aliasiert der ADXL362 Eingangssignale nicht durch Undersampling; es tastet die volle Bandbreite des Sensors bei allen Datenraten ab. Der ADXL362 bietet immer eine Ausgangsauflösung von 12 Bit; 8-Bit-formatierte Daten werden auch für effizientere Einzelbyte-Übertragungen bereitgestellt, wenn eine niedrigere Auflösung ausreicht. Messbereiche von ±2 g, ±4 g und ±8 g sind verfügbar, mit einer Auflösung von 1 mg/LSB im Bereich von ±2 g. Für Anwendungen, bei denen ein niedrigerer Rauschpegel als die normalen 550 μg/√Hz des ADXL362 gewünscht wird, kann bei minimaler Erhöhung des Versorgungsstroms einer von zwei niedrigeren Rauschmodi (bis zu 175 μg/√Hz typisch) ausgewählt werden Aufgrund seines extrem niedrigen Stromverbrauchs verfügt der ADXL362 über viele Funktionen, um eine echte Leistungsreduzierung auf Systemebene zu ermöglichen. Es enthält einen tiefen Multimode-Ausgangs-FIFO, einen eingebauten Micropower-Temperatursensor und mehrere Aktivitätserkennungsmodi, einschließlich einstellbarem Schwellen-Schlaf- und Aufwachbetrieb, der bis zu 270 nA bei einer Messrate von 6 Hz (ungefähr) laufen kann. Ein Pin-Ausgang ist vorgesehen, um bei Bedarf einen externen Schalter direkt zu steuern, wenn Aktivität erkannt wird. Darüber hinaus verfügt der ADXL362 über Vorkehrungen für die externe Steuerung der Abtastzeit und/oder einer externen Uhr.
 
-LibDriver ADXL362 is the full function driver of adxl362 launched by LibDriver. It provides acceleration reading, acceleration FIFO mode acquisition, activity /inactivity state detection and other functions. LibDriver is MISRA compliant.
+LibDriver ADXL362 ist der voll funktionsfähige Treiber von adxl362, der von LibDriver gestartet wurde. Es bietet Beschleunigungsablesung, Beschleunigungs-FIFO-Moduserfassung, Aktivitäts-/Inaktivitätszustandserkennung und andere Funktionen. LibDriver ist MISRA-konform.
 
-### Table of Contents
+### Inhaltsverzeichnis
 
-  - [Instruction](#Instruction)
-  - [Install](#Install)
-  - [Usage](#Usage)
+  - [Anweisung](#Anweisung)
+  - [Installieren](#Installieren)
+  - [Nutzung](#Nutzung)
     - [example basic](#example-basic)
     - [example fifo](#example-fifo)
     - [example motion](#example-motion)
-  - [Document](#Document)
-  - [Contributing](#Contributing)
-  - [License](#License)
-  - [Contact Us](#Contact-Us)
+  - [Dokument](#Dokument)
+  - [Beitrag](#Beitrag)
+  - [Lizenz](#Lizenz)
+  - [Kontaktieren Sie uns](#Kontaktieren-Sie-uns)
 
-### Instruction
+### Anweisung
 
-/src includes LibDriver ADXL362 source files.
+/src enthält LibDriver ADXL362-Quelldateien.
 
-/interface includes LibDriver ADXL362 SPI platform independent template.
+/interface enthält die plattformunabhängige Vorlage LibDriver ADXL362 SPI.
 
-/test includes LibDriver ADXL362 driver test code and this code can test the chip necessary function simply.
+/test enthält den Testcode des LibDriver ADXL362-Treibers und dieser Code kann die erforderliche Funktion des Chips einfach testen.
 
-/example includes LibDriver ADXL362 sample code.
+/example enthält LibDriver ADXL362-Beispielcode.
 
-/doc includes LibDriver ADXL362 offline document.
+/doc enthält das LibDriver ADXL362-Offlinedokument.
 
-/datasheet includes ADXL362 datasheet.
+/Datenblatt enthält ADXL362-Datenblatt.
 
-/project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
+/project enthält den allgemeinen Beispielcode für Linux- und MCU-Entwicklungsboards. Alle Projekte verwenden das Shell-Skript, um den Treiber zu debuggen, und die detaillierten Anweisungen finden Sie in der README.md jedes Projekts.
 
-/misra includes the LibDriver MISRA code scanning results.
+/misra enthält die Ergebnisse des LibDriver MISRA Code Scans.
 
-### Install
+### Installieren
 
-Reference /interface SPI platform independent template and finish your platform SPI driver.
+Verweisen Sie auf eine plattformunabhängige SPI-Schnittstellenvorlage und stellen Sie Ihren Plattform-SPI-Treiber fertig.
 
-Add /src, /interface and /example to your project.
+Fügen Sie /src, /interface und /example zu Ihrem Projekt hinzu.
 
-### Usage
+### Nutzung
 
 #### example basic
 
@@ -106,7 +106,7 @@ return 0;
 
 #### example fifo
 
-```C
+```c
 #include "driver_adxl362_fifo.h"
 
 uint8_t res;
@@ -349,60 +349,60 @@ g_gpio_irq = NULL;
 return 0;
 ```
 
-### Document
+### Dokument
 
-Online documents: [https://www.libdriver.com/docs/adxl362/index.html](https://www.libdriver.com/docs/adxl362/index.html).
+Online-Dokumente: [https://www.libdriver.com/docs/adxl362/index.html](https://www.libdriver.com/docs/adxl362/index.html).
 
-Offline documents: /doc/html/index.html.
+Offline-Dokumente: /doc/html/index.html.
 
-### Contributing
+### Beitrag
 
-Please refer to CONTRIBUTING.md.
+Bitte beachten Sie CONTRIBUTING.md.
 
-### License
+### Lizenz
 
-Copyright (c) 2015 - present LibDriver All rights reserved
-
-
-
-The MIT License (MIT) 
+Urheberrechte © (c) 2015 - Gegenwart LibDriver Alle Rechte vorbehalten
 
 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-
-of this software and associated documentation files (the "Software"), to deal
-
-in the Software without restriction, including without limitation the rights
-
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-
-copies of the Software, and to permit persons to whom the Software is
-
-furnished to do so, subject to the following conditions: 
+Die MIT-Lizenz (MIT)
 
 
 
-The above copyright notice and this permission notice shall be included in all
+Hiermit wird jeder Person kostenlos die Erlaubnis erteilt, eine Kopie zu erhalten
 
-copies or substantial portions of the Software. 
+dieser Software und zugehörigen Dokumentationsdateien (die „Software“) zu behandeln
+
+in der Software ohne Einschränkung, einschließlich, aber nicht beschränkt auf die Rechte
+
+zu verwenden, zu kopieren, zu modifizieren, zusammenzuführen, zu veröffentlichen, zu verteilen, unterzulizenzieren und/oder zu verkaufen
+
+Kopien der Software und Personen, denen die Software gehört, zu gestatten
+
+dazu eingerichtet werden, unter folgenden Bedingungen:
 
 
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+Der obige Urheberrechtshinweis und dieser Genehmigungshinweis müssen in allen enthalten sein
 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+Kopien oder wesentliche Teile der Software.
 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+DIE SOFTWARE WIRD "WIE BESEHEN" BEREITGESTELLT, OHNE JEGLICHE GEWÄHRLEISTUNG, AUSDRÜCKLICH ODER
 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+STILLSCHWEIGEND, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF DIE GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT,
 
-SOFTWARE. 
+EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG VON RECHTEN DRITTER. IN KEINEM FALL DARF DAS
 
-### Contact Us
+AUTOREN ODER URHEBERRECHTSINHABER HAFTEN FÜR JEGLICHE ANSPRÜCHE, SCHÄDEN ODER ANDERE
 
-Please sent an e-mail to lishifenging@outlook.com.
+HAFTUNG, OB AUS VERTRAG, DELIKT ODER ANDERWEITIG, ENTSTEHEND AUS,
+
+AUS ODER IM ZUSAMMENHANG MIT DER SOFTWARE ODER DER VERWENDUNG ODER ANDEREN HANDLUNGEN MIT DER
+
+SOFTWARE.
+
+### Kontaktieren Sie uns
+
+Bitte senden Sie eine E-Mail an lishifenging@outlook.com.
