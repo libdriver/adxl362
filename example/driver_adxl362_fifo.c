@@ -131,6 +131,7 @@ static void a_adxl362_interface_receive_callback(uint8_t type)
                 /* run the callback */
                 gs_callback(gs_frame, frame_len);
             }
+            
             break;
         }
         case ADXL362_STATUS_FIFO_READY :
