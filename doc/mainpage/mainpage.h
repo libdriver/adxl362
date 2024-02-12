@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver ADXL362
- * @brief     libdriver adxl362 is a full function driver of adxl362 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver ADXL362 is a full function driver of ADXL362 and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
