@@ -68,7 +68,7 @@ void EXTI0_IRQHandler(void)
 
 /**
  * @brief     gpio exti callback
- * @param[in] pin is the gpio pin
+ * @param[in] pin gpio pin
  * @note      none
  */
 void HAL_GPIO_EXTI_Callback(uint16_t pin)
@@ -85,8 +85,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin)
 
 /**
  * @brief     interface fifo callback
- * @param[in] *frame points to a frame buffer
- * @param[in] frame_len is the frame length
+ * @param[in] *frame pointer to a frame buffer
+ * @param[in] frame_len length of frame
  * @note      none
  */
 static void a_fifo_callback(adxl362_frame_t *frame, uint16_t frame_len)
@@ -123,7 +123,7 @@ static void a_fifo_callback(adxl362_frame_t *frame, uint16_t frame_len)
 
 /**
  * @brief     interface motion callback
- * @param[in] type is the irq type
+ * @param[in] type irq type
  * @note      none
  */
 static void a_motion_callback(uint8_t type)
@@ -187,8 +187,8 @@ static void a_motion_callback(uint8_t type)
 
 /**
  * @brief     adxl362 full function
- * @param[in] argc is arg numbers
- * @param[in] **argv is the arg address
+ * @param[in] argc arg numbers
+ * @param[in] **argv arg address
  * @return    status code
  *            - 0 success
  *            - 1 run failed

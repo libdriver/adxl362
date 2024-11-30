@@ -61,7 +61,7 @@ uint8_t adxl362_fifo_test_irq_handler(void)
 
 /**
  * @brief     interface receive callback
- * @param[in] type is the irq type
+ * @param[in] type irq type
  * @note      none
  */
 static void a_adxl362_interface_receive_callback(uint8_t type)
@@ -177,7 +177,7 @@ static void a_adxl362_interface_receive_callback(uint8_t type)
 
 /**
  * @brief     fifo test
- * @param[in] times is the set times
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed

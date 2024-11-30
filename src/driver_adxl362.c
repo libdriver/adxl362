@@ -88,10 +88,10 @@
 
 /**
  * @brief      read bytes
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  reg is the register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  reg register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of data
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -111,10 +111,10 @@ static uint8_t a_adxl362_read(adxl362_handle_t *handle, uint8_t reg, uint8_t *bu
 
 /**
  * @brief     write bytes
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] reg is the register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] reg register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len length of data
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -134,9 +134,9 @@ static uint8_t a_adxl362_write(adxl362_handle_t *handle, uint8_t reg, uint8_t *b
 
 /**
  * @brief      read fifo
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of data
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -156,8 +156,8 @@ static uint8_t a_adxl362_read_fifo(adxl362_handle_t *handle, uint8_t *buf, uint1
 
 /**
  * @brief      get the chip revision
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *id points to an id buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *id pointer to an id buffer
  * @return     status code
  *             - 0 success
  *             - 1 get revision failed
@@ -191,7 +191,7 @@ uint8_t adxl362_get_revision(adxl362_handle_t *handle, uint8_t *id)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an adxl362 handle structure
+ * @param[in] *handle pointer to an adxl362 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi initialization failed
@@ -323,7 +323,7 @@ uint8_t adxl362_init(adxl362_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an adxl362 handle structure
+ * @param[in] *handle pointer to an adxl362 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi deinit failed
@@ -377,9 +377,9 @@ uint8_t adxl362_deinit(adxl362_handle_t *handle)
 
 /**
  * @brief      read the data with eight most significant bits
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *raw points to a raw data buffer
- * @param[out] *g points to a converted data buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *raw pointer to a raw data buffer
+ * @param[out] *g pointer to a converted data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read 8msb failed
@@ -445,9 +445,9 @@ uint8_t adxl362_read_8msb(adxl362_handle_t *handle, int8_t raw[3], float g[3])
 
 /**
  * @brief      read the temperature
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *raw points to a raw data buffer
- * @param[out] *temp points to a converted temperature data buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *raw pointer to a raw data buffer
+ * @param[out] *temp pointer to a converted temperature data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature failed
@@ -484,8 +484,8 @@ uint8_t adxl362_read_temperature(adxl362_handle_t *handle, int16_t *raw, float *
 
 /**
  * @brief      get the chip status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get status failed
@@ -519,8 +519,8 @@ uint8_t adxl362_get_status(adxl362_handle_t *handle, uint8_t *status)
 
 /**
  * @brief      get the fifo counter
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *counter points to a counter buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *counter pointer to a counter buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fifo counter failed
@@ -557,7 +557,7 @@ uint8_t adxl362_get_fifo_counter(adxl362_handle_t *handle, uint16_t *counter)
 
 /**
  * @brief     soft reset
- * @param[in] *handle points to an adxl362 handle structure
+ * @param[in] *handle pointer to an adxl362 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 soft reset failed
@@ -594,8 +594,8 @@ uint8_t adxl362_soft_reset(adxl362_handle_t *handle)
 
 /**
  * @brief     enable or disable saving temperature data to fifo
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set fifo temperature failed
@@ -639,8 +639,8 @@ uint8_t adxl362_set_fifo_temperature(adxl362_handle_t *handle, adxl362_bool_t en
 
 /**
  * @brief      get the fifo temperature status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fifo temperature failed
@@ -676,8 +676,8 @@ uint8_t adxl362_get_fifo_temperature(adxl362_handle_t *handle, adxl362_bool_t *e
 
 /**
  * @brief     set the fifo mode
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] mode is the fifo mode
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] mode fifo mode
  * @return    status code
  *            - 0 success
  *            - 1 set fifo mode failed
@@ -721,8 +721,8 @@ uint8_t adxl362_set_fifo_mode(adxl362_handle_t *handle, adxl362_fifo_mode_t mode
 
 /**
  * @brief      get the fifo mode
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *mode points to a mode buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *mode pointer to a mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fifo mode failed
@@ -758,8 +758,8 @@ uint8_t adxl362_get_fifo_mode(adxl362_handle_t *handle, adxl362_fifo_mode_t *mod
 
 /**
  * @brief     set the fifo sample
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] sample is the number of samples to store in the fifo
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] sample number of samples to store in the fifo
  * @return    status code
  *            - 0 success
  *            - 1 set fifo sample failed
@@ -819,8 +819,8 @@ uint8_t adxl362_set_fifo_sample(adxl362_handle_t *handle, uint16_t sample)
 
 /**
  * @brief      get the fifo sample
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *sample points to a sample buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *sample pointer to a sample buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fifo sample failed
@@ -864,8 +864,8 @@ uint8_t adxl362_get_fifo_sample(adxl362_handle_t *handle, uint16_t *sample)
 
 /**
  * @brief     set the interrupt pin1 active level
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] level is the interrupt pin active level
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] level interrupt pin active level
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt pin active level failed
@@ -909,8 +909,8 @@ uint8_t adxl362_set_interrupt_pin1_active_level(adxl362_handle_t *handle, adxl36
 
 /**
  * @brief      get the interrupt pin1 active level
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *level points to an interrupt pin active level buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *level pointer to an interrupt pin active level buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt pin active level failed
@@ -946,9 +946,9 @@ uint8_t adxl362_get_interrupt_pin1_active_level(adxl362_handle_t *handle, adxl36
 
 /**
  * @brief     set the interrupt pin1 map
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] map is the interrupt function map
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] map interrupt function map
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt pin map failed
@@ -992,9 +992,9 @@ uint8_t adxl362_set_interrupt_pin1_map(adxl362_handle_t *handle, adxl362_interru
 
 /**
  * @brief      get the interrupt pin1 map
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  map is the interrupt function map
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  map interrupt function map
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt pin map failed
@@ -1030,8 +1030,8 @@ uint8_t adxl362_get_interrupt_pin1_map(adxl362_handle_t *handle, adxl362_interru
 
 /**
  * @brief     set the interrupt pin2 active level
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] level is the interrupt pin active level
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] level interrupt pin active level
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt pin active level failed
@@ -1075,8 +1075,8 @@ uint8_t adxl362_set_interrupt_pin2_active_level(adxl362_handle_t *handle, adxl36
 
 /**
  * @brief      get the interrupt pin2 active level
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *level points to an interrupt pin active level buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *level pointer to an interrupt pin active level buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt pin active level failed
@@ -1112,9 +1112,9 @@ uint8_t adxl362_get_interrupt_pin2_active_level(adxl362_handle_t *handle, adxl36
 
 /**
  * @brief     set the interrupt pin2 map
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] map is the interrupt function map
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] map interrupt function map
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt pin map failed
@@ -1158,9 +1158,9 @@ uint8_t adxl362_set_interrupt_pin2_map(adxl362_handle_t *handle, adxl362_interru
 
 /**
  * @brief      get the interrupt pin2 map
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  map is the interrupt function map
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  map interrupt function map
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt pin map failed
@@ -1196,8 +1196,8 @@ uint8_t adxl362_get_interrupt_pin2_map(adxl362_handle_t *handle, adxl362_interru
 
 /**
  * @brief     set the measurement range
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] range is the measurement range
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] range measurement range
  * @return    status code
  *            - 0 success
  *            - 1 set range failed
@@ -1241,8 +1241,8 @@ uint8_t adxl362_set_range(adxl362_handle_t *handle, adxl362_range_t range)
 
 /**
  * @brief      get the measurement range
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *range points to a measurement range buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *range pointer to a measurement range buffer
  * @return     status code
  *             - 0 success
  *             - 1 get range failed
@@ -1278,8 +1278,8 @@ uint8_t adxl362_get_range(adxl362_handle_t *handle, adxl362_range_t *range)
 
 /**
  * @brief     set the filter bandwidth
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] bandwidth is the filter bandwidth
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] bandwidth filter bandwidth
  * @return    status code
  *            - 0 success
  *            - 1 set bandwidth failed
@@ -1323,8 +1323,8 @@ uint8_t adxl362_set_bandwidth(adxl362_handle_t *handle, adxl362_bandwidth_t band
 
 /**
  * @brief      get the filter bandwidth
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *bandwidth points to a filter bandwidth buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *bandwidth pointer to a filter bandwidth buffer
  * @return     status code
  *             - 0 success
  *             - 1 get bandwidth failed
@@ -1360,8 +1360,8 @@ uint8_t adxl362_get_bandwidth(adxl362_handle_t *handle, adxl362_bandwidth_t *ban
 
 /**
  * @brief     enable or disable interrupt pin2 as the external sampling trigger
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt pin2 as external sampling trigger failed
@@ -1405,8 +1405,8 @@ uint8_t adxl362_set_interrupt_pin2_as_external_sampling_trigger(adxl362_handle_t
 
 /**
  * @brief      get the interrupt pin2 as the external sampling trigger status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt pin2 as external sampling trigger failed
@@ -1442,8 +1442,8 @@ uint8_t adxl362_get_interrupt_pin2_as_external_sampling_trigger(adxl362_handle_t
 
 /**
  * @brief     set the output data rate
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] odr is the output data rate
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] odr output data rate
  * @return    status code
  *            - 0 success
  *            - 1 set odr failed
@@ -1487,8 +1487,8 @@ uint8_t adxl362_set_odr(adxl362_handle_t *handle, adxl362_odr_t odr)
 
 /**
  * @brief      get the output data rate
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *odr points to an output data rate buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *odr pointer to an output data rate buffer
  * @return     status code
  *             - 0 success
  *             - 1 get odr failed
@@ -1524,8 +1524,8 @@ uint8_t adxl362_get_odr(adxl362_handle_t *handle, adxl362_odr_t *odr)
 
 /**
  * @brief     enable or disable interrupt pin1 as the external clock
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt pin1 as external clock failed
@@ -1569,8 +1569,8 @@ uint8_t adxl362_set_interrupt_pin1_as_external_clock(adxl362_handle_t *handle, a
 
 /**
  * @brief      get the interrupt pin1 as the external clock status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt pin1 as external clock failed
@@ -1606,8 +1606,8 @@ uint8_t adxl362_get_interrupt_pin1_as_external_clock(adxl362_handle_t *handle, a
 
 /**
  * @brief     set the noise mode
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] mode is the noise mode
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] mode noise mode
  * @return    status code
  *            - 0 success
  *            - 1 set noise mode failed
@@ -1651,8 +1651,8 @@ uint8_t adxl362_set_noise_mode(adxl362_handle_t *handle, adxl362_noise_mode_t mo
 
 /**
  * @brief      get the noise mode
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *mode points to a noise mode buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *mode pointer to a noise mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get noise mode failed
@@ -1688,8 +1688,8 @@ uint8_t adxl362_get_noise_mode(adxl362_handle_t *handle, adxl362_noise_mode_t *m
 
 /**
  * @brief     enable or disable chip wake up
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set wake up failed
@@ -1733,8 +1733,8 @@ uint8_t adxl362_set_wake_up(adxl362_handle_t *handle, adxl362_bool_t enable)
 
 /**
  * @brief      get the chip wake up status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get wake up failed
@@ -1770,8 +1770,8 @@ uint8_t adxl362_get_wake_up(adxl362_handle_t *handle, adxl362_bool_t *enable)
 
 /**
  * @brief     enable or disable auto sleep
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set auto sleep failed
@@ -1815,8 +1815,8 @@ uint8_t adxl362_set_auto_sleep(adxl362_handle_t *handle, adxl362_bool_t enable)
 
 /**
  * @brief      get the auto sleep status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get auto sleep failed
@@ -1852,8 +1852,8 @@ uint8_t adxl362_get_auto_sleep(adxl362_handle_t *handle, adxl362_bool_t *enable)
 
 /**
  * @brief     set the chip mode
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] mode is the chip mode
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] mode chip mode
  * @return    status code
  *            - 0 success
  *            - 1 set mode failed
@@ -1897,8 +1897,8 @@ uint8_t adxl362_set_mode(adxl362_handle_t *handle, adxl362_mode_t mode)
 
 /**
  * @brief      get the chip mode
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *mode points to a chip mode buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *mode pointer to a chip mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get mode failed
@@ -1934,8 +1934,8 @@ uint8_t adxl362_get_mode(adxl362_handle_t *handle, adxl362_mode_t *mode)
 
 /**
  * @brief     enable or disable the self test
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set self test failed
@@ -1979,8 +1979,8 @@ uint8_t adxl362_set_self_test(adxl362_handle_t *handle, adxl362_bool_t enable)
 
 /**
  * @brief      get the self test status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get self test failed
@@ -2016,8 +2016,8 @@ uint8_t adxl362_get_self_test(adxl362_handle_t *handle, adxl362_bool_t *enable)
 
 /**
  * @brief     set the activity threshold
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] threshold is the set threshold
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] threshold activity threshold
  * @return    status code
  *            - 0 success
  *            - 1 set activity threshold failed
@@ -2061,8 +2061,8 @@ uint8_t adxl362_set_activity_threshold(adxl362_handle_t *handle, uint16_t thresh
 
 /**
  * @brief      get the activity threshold
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *threshold points to a threshold buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *threshold pointer to a threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get activity threshold failed
@@ -2099,9 +2099,9 @@ uint8_t adxl362_get_activity_threshold(adxl362_handle_t *handle, uint16_t *thres
 
 /**
  * @brief      convert the activity threshold to the register raw data
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  g is the activity threshold
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  g activity threshold
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2156,9 +2156,9 @@ uint8_t adxl362_activity_threshold_convert_to_register(adxl362_handle_t *handle,
 
 /**
  * @brief      convert the register raw data to the activity threshold
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *g points to an activity threshold buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *g pointer to an activity threshold buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2206,8 +2206,8 @@ uint8_t adxl362_activity_threshold_convert_to_data(adxl362_handle_t *handle, uin
 
 /**
  * @brief     set the activity time
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] tim is the activity time
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] tim activity time
  * @return    status code
  *            - 0 success
  *            - 1 set activity time failed
@@ -2243,8 +2243,8 @@ uint8_t adxl362_set_activity_time(adxl362_handle_t *handle, uint8_t tim)
 
 /**
  * @brief      get the activity time
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *tim points to an activity time buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *tim pointer to an activity time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get activity time failed
@@ -2280,9 +2280,9 @@ uint8_t adxl362_get_activity_time(adxl362_handle_t *handle, uint8_t *tim)
 
 /**
  * @brief      convert the activity time to the register raw data
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  ms is the activity time in ms
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  ms activity time in ms
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2349,9 +2349,9 @@ uint8_t adxl362_activity_time_convert_to_register(adxl362_handle_t *handle, floa
 
 /**
  * @brief      convert the register raw data to the activity time
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *ms points to an activity time buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *ms pointer to an activity time buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2411,8 +2411,8 @@ uint8_t adxl362_activity_time_convert_to_data(adxl362_handle_t *handle, uint8_t 
 
 /**
  * @brief     set the inactivity threshold
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] threshold is the set threshold
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] threshold inactivity threshold
  * @return    status code
  *            - 0 success
  *            - 1 set inactivity threshold failed
@@ -2456,8 +2456,8 @@ uint8_t adxl362_set_inactivity_threshold(adxl362_handle_t *handle, uint16_t thre
 
 /**
  * @brief      get the inactivity threshold
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *threshold points to a threshold buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *threshold pointer to a threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get inactivity threshold failed
@@ -2494,9 +2494,9 @@ uint8_t adxl362_get_inactivity_threshold(adxl362_handle_t *handle, uint16_t *thr
 
 /**
  * @brief      convert the inactivity threshold to the register raw data
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  g is the inactivity threshold
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  g inactivity threshold
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2551,9 +2551,9 @@ uint8_t adxl362_inactivity_threshold_convert_to_register(adxl362_handle_t *handl
 
 /**
  * @brief      convert the register raw data to the inactivity threshold
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *g points to an inactivity threshold buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *g pointer to an inactivity threshold buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2601,8 +2601,8 @@ uint8_t adxl362_inactivity_threshold_convert_to_data(adxl362_handle_t *handle, u
 
 /**
  * @brief     set the inactivity time
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] tim is the inactivity time
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] tim inactivity time
  * @return    status code
  *            - 0 success
  *            - 1 set inactivity time failed
@@ -2639,8 +2639,8 @@ uint8_t adxl362_set_inactivity_time(adxl362_handle_t *handle, uint16_t tim)
 
 /**
  * @brief      get the inactivity time
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *tim points to an inactivity time buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *tim pointer to an inactivity time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get inactivity time failed
@@ -2676,9 +2676,9 @@ uint8_t adxl362_get_inactivity_time(adxl362_handle_t *handle, uint16_t *tim)
 
 /**
  * @brief      convert the inactivity time to the register raw data
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  ms is the inactivity time in ms
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  ms inactivity time in ms
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2745,9 +2745,9 @@ uint8_t adxl362_inactivity_time_convert_to_register(adxl362_handle_t *handle, fl
 
 /**
  * @brief      convert the register raw data to the inactivity time
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *ms points to an inactivity time buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *ms pointer to an inactivity time buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2807,8 +2807,8 @@ uint8_t adxl362_inactivity_time_convert_to_data(adxl362_handle_t *handle, uint16
 
 /**
  * @brief     set the detect mode
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] mode is the set detect mode
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] mode detect mode
  * @return    status code
  *            - 0 success
  *            - 1 set detect mode failed
@@ -2852,8 +2852,8 @@ uint8_t adxl362_set_detect_mode(adxl362_handle_t *handle, adxl362_detect_mode_t 
 
 /**
  * @brief      get the detect mode
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *mode points to a detect mode buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *mode pointer to a detect mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get detect mode failed
@@ -2889,8 +2889,8 @@ uint8_t adxl362_get_detect_mode(adxl362_handle_t *handle, adxl362_detect_mode_t 
 
 /**
  * @brief     set the inactivity detect trigger mode
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] trigger is the detect trigger mode
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] trigger detect trigger mode
  * @return    status code
  *            - 0 success
  *            - 1 set inactivity detect trigger failed
@@ -2934,8 +2934,8 @@ uint8_t adxl362_set_inactivity_detect_trigger(adxl362_handle_t *handle, adxl362_
 
 /**
  * @brief      get the inactivity detect trigger mode
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *trigger points to a detect trigger mode buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *trigger pointer to a detect trigger mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get inactivity detect trigger failed
@@ -2971,8 +2971,8 @@ uint8_t adxl362_get_inactivity_detect_trigger(adxl362_handle_t *handle, adxl362_
 
 /**
  * @brief     set the activity detect trigger mode
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] trigger is the detect trigger mode
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] trigger detect trigger mode
  * @return    status code
  *            - 0 success
  *            - 1 set activity detect trigger failed
@@ -3016,8 +3016,8 @@ uint8_t adxl362_set_activity_detect_trigger(adxl362_handle_t *handle, adxl362_de
 
 /**
  * @brief      get the activity detect trigger mode
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *trigger points to a detect trigger mode buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *trigger pointer to a detect trigger mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get activity detect trigger failed
@@ -3053,8 +3053,8 @@ uint8_t adxl362_get_activity_detect_trigger(adxl362_handle_t *handle, adxl362_de
 
 /**
  * @brief     enable or disable inactivity
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set inactivity failed
@@ -3098,8 +3098,8 @@ uint8_t adxl362_set_inactivity(adxl362_handle_t *handle, adxl362_bool_t enable)
 
 /**
  * @brief      get the inactivity status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get inactivity failed
@@ -3135,8 +3135,8 @@ uint8_t adxl362_get_inactivity(adxl362_handle_t *handle, adxl362_bool_t *enable)
 
 /**
  * @brief     enable or disable activity
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set activity failed
@@ -3180,8 +3180,8 @@ uint8_t adxl362_set_activity(adxl362_handle_t *handle, adxl362_bool_t enable)
 
 /**
  * @brief      get the activity status
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get activity failed
@@ -3217,9 +3217,9 @@ uint8_t adxl362_get_activity(adxl362_handle_t *handle, adxl362_bool_t *enable)
 
 /**
  * @brief      read the data
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *raw points to a raw data buffer
- * @param[out] *g points to a converted data buffer
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *raw pointer to a raw data buffer
+ * @param[out] *g pointer to a converted data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -3291,9 +3291,9 @@ uint8_t adxl362_read(adxl362_handle_t *handle, int16_t raw[3], float g[3])
 
 /**
  * @brief         read data from the fifo
- * @param[in]     *handle points to an adxl362 handle structure
- * @param[out]    *frame points to a frame buffer
- * @param[in,out] *frame_len points to a frame length buffer
+ * @param[in]     *handle pointer to an adxl362 handle structure
+ * @param[out]    *frame pointer to a frame buffer
+ * @param[in,out] *frame_len pointer to a frame length buffer
  * @return        status code
  *                - 0 success
  *                - 1 read fifo failed
@@ -3402,7 +3402,7 @@ uint8_t adxl362_read_fifo(adxl362_handle_t *handle, adxl362_frame_t *frame, uint
 
 /**
  * @brief     irq handler
- * @param[in] *handle points to an adxl362 handle structure
+ * @param[in] *handle pointer to an adxl362 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 run failed
@@ -3494,10 +3494,10 @@ uint8_t adxl362_irq_handler(adxl362_handle_t *handle)
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to an adxl362 handle structure
- * @param[in] reg is the register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to an adxl362 handle structure
+ * @param[in] reg register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len length of data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -3521,10 +3521,10 @@ uint8_t adxl362_set_reg(adxl362_handle_t *handle, uint8_t reg, uint8_t *buf, uin
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[in]  reg is the register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[in]  reg register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -3548,9 +3548,9 @@ uint8_t adxl362_get_reg(adxl362_handle_t *handle, uint8_t reg, uint8_t *buf, uin
 
 /**
  * @brief      read from fifo
- * @param[in]  *handle points to an adxl362 handle structure
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to an adxl362 handle structure
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -3574,7 +3574,7 @@ uint8_t adxl362_get_fifo(adxl362_handle_t *handle, uint8_t *buf, uint16_t len)
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an adxl362 info structure
+ * @param[out] *info pointer to an adxl362 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL

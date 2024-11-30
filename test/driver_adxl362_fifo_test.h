@@ -59,7 +59,7 @@ uint8_t adxl362_fifo_test_irq_handler(void);
 
 /**
  * @brief     fifo test
- * @param[in] times is the set times
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed
