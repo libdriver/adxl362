@@ -78,7 +78,7 @@ uint8_t adxl362_basic_deinit(void);
 
 /**
  * @brief      basic example read
- * @param[out] *g points to a converted data buffer
+ * @param[out] *g pointer to a converted data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -88,7 +88,7 @@ uint8_t adxl362_basic_read(float g[3]);
 
 /**
  * @brief      basic example read 8msb
- * @param[out] *g points to a converted data buffer
+ * @param[out] *g pointer to a converted data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -98,7 +98,7 @@ uint8_t adxl362_basic_read_8msb(float g[3]);
 
 /**
  * @brief      basic example read temperature
- * @param[out] *temp points to a converted temperature buffer
+ * @param[out] *temp pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed

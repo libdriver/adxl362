@@ -40,7 +40,7 @@ static adxl362_handle_t gs_handle;        /**< adxl362 handle */
 
 /**
  * @brief     read test
- * @param[in] times is the set times
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed

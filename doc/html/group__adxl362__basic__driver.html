@@ -883,9 +883,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the activity threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*g</td><td>points to an activity threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*g</td><td>pointer to an activity threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -936,9 +936,9 @@ Functions</h2></td></tr>
 <p>convert the activity threshold to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">g</td><td>is the activity threshold </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">g</td><td>activity threshold </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -990,9 +990,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the activity time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*ms</td><td>points to an activity time buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*ms</td><td>pointer to an activity time buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1043,9 +1043,9 @@ Functions</h2></td></tr>
 <p>convert the activity time to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ms</td><td>is the activity time in ms </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ms</td><td>activity time in ms </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1081,7 +1081,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1128,8 +1128,8 @@ Functions</h2></td></tr>
 <p>get the activity status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1175,8 +1175,8 @@ Functions</h2></td></tr>
 <p>get the activity detect trigger mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*trigger</td><td>points to a detect trigger mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*trigger</td><td>pointer to a detect trigger mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1222,8 +1222,8 @@ Functions</h2></td></tr>
 <p>get the activity threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>points to a threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>pointer to a threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1269,8 +1269,8 @@ Functions</h2></td></tr>
 <p>get the activity time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*tim</td><td>points to an activity time buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*tim</td><td>pointer to an activity time buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1316,8 +1316,8 @@ Functions</h2></td></tr>
 <p>get the auto sleep status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1363,8 +1363,8 @@ Functions</h2></td></tr>
 <p>get the filter bandwidth </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*bandwidth</td><td>points to a filter bandwidth buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*bandwidth</td><td>pointer to a filter bandwidth buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1410,8 +1410,8 @@ Functions</h2></td></tr>
 <p>get the detect mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a detect mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a detect mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1457,8 +1457,8 @@ Functions</h2></td></tr>
 <p>get the fifo counter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*counter</td><td>points to a counter buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*counter</td><td>pointer to a counter buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1504,8 +1504,8 @@ Functions</h2></td></tr>
 <p>get the fifo mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1551,8 +1551,8 @@ Functions</h2></td></tr>
 <p>get the fifo sample </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*sample</td><td>points to a sample buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*sample</td><td>pointer to a sample buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1598,8 +1598,8 @@ Functions</h2></td></tr>
 <p>get the fifo temperature status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1645,8 +1645,8 @@ Functions</h2></td></tr>
 <p>get the inactivity status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1692,8 +1692,8 @@ Functions</h2></td></tr>
 <p>get the inactivity detect trigger mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*trigger</td><td>points to a detect trigger mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*trigger</td><td>pointer to a detect trigger mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1739,8 +1739,8 @@ Functions</h2></td></tr>
 <p>get the inactivity threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>points to a threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>pointer to a threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1786,8 +1786,8 @@ Functions</h2></td></tr>
 <p>get the inactivity time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*tim</td><td>points to an inactivity time buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*tim</td><td>pointer to an inactivity time buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1833,8 +1833,8 @@ Functions</h2></td></tr>
 <p>get the interrupt pin1 active level </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*level</td><td>points to an interrupt pin active level buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*level</td><td>pointer to an interrupt pin active level buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1880,8 +1880,8 @@ Functions</h2></td></tr>
 <p>get the interrupt pin1 as the external clock status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1933,9 +1933,9 @@ Functions</h2></td></tr>
 <p>get the interrupt pin1 map </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>is the interrupt function map </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>interrupt function map </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1981,8 +1981,8 @@ Functions</h2></td></tr>
 <p>get the interrupt pin2 active level </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*level</td><td>points to an interrupt pin active level buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*level</td><td>pointer to an interrupt pin active level buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2028,8 +2028,8 @@ Functions</h2></td></tr>
 <p>get the interrupt pin2 as the external sampling trigger status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2081,9 +2081,9 @@ Functions</h2></td></tr>
 <p>get the interrupt pin2 map </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>is the interrupt function map </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>interrupt function map </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2129,8 +2129,8 @@ Functions</h2></td></tr>
 <p>get the chip mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a chip mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a chip mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2176,8 +2176,8 @@ Functions</h2></td></tr>
 <p>get the noise mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a noise mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a noise mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2223,8 +2223,8 @@ Functions</h2></td></tr>
 <p>get the output data rate </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*odr</td><td>points to an output data rate buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*odr</td><td>pointer to an output data rate buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2270,8 +2270,8 @@ Functions</h2></td></tr>
 <p>get the measurement range </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*range</td><td>points to a measurement range buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*range</td><td>pointer to a measurement range buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2317,8 +2317,8 @@ Functions</h2></td></tr>
 <p>get the chip revision </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2364,8 +2364,8 @@ Functions</h2></td></tr>
 <p>get the self test status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2411,8 +2411,8 @@ Functions</h2></td></tr>
 <p>get the chip status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*status</td><td>points to a status buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*status</td><td>pointer to a status buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2458,8 +2458,8 @@ Functions</h2></td></tr>
 <p>get the chip wake up status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2511,9 +2511,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the inactivity threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*g</td><td>points to an inactivity threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*g</td><td>pointer to an inactivity threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2564,9 +2564,9 @@ Functions</h2></td></tr>
 <p>convert the inactivity threshold to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">g</td><td>is the inactivity threshold </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">g</td><td>inactivity threshold </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2618,9 +2618,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the inactivity time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*ms</td><td>points to an inactivity time buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*ms</td><td>pointer to an inactivity time buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2671,9 +2671,9 @@ Functions</h2></td></tr>
 <p>convert the inactivity time to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ms</td><td>is the inactivity time in ms </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ms</td><td>inactivity time in ms </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2709,7 +2709,7 @@ Functions</h2></td></tr>
 <p>get chip's information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an adxl362 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an adxl362 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2743,7 +2743,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2781,7 +2781,7 @@ Functions</h2></td></tr>
 <p>irq handler </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2833,9 +2833,9 @@ Functions</h2></td></tr>
 <p>read the data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*raw</td><td>points to a raw data buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*g</td><td>points to a converted data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*raw</td><td>pointer to a raw data buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*g</td><td>pointer to a converted data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2887,9 +2887,9 @@ Functions</h2></td></tr>
 <p>read the data with eight most significant bits </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*raw</td><td>points to a raw data buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*g</td><td>points to a converted data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*raw</td><td>pointer to a raw data buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*g</td><td>pointer to a converted data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2941,9 +2941,9 @@ Functions</h2></td></tr>
 <p>read data from the fifo </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*frame</td><td>points to a frame buffer </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">*frame_len</td><td>points to a frame length buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*frame</td><td>pointer to a frame buffer </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*frame_len</td><td>pointer to a frame length buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2995,9 +2995,9 @@ Functions</h2></td></tr>
 <p>read the temperature </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*raw</td><td>points to a raw data buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*temp</td><td>points to a converted temperature data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*raw</td><td>pointer to a raw data buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*temp</td><td>pointer to a converted temperature data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3043,8 +3043,8 @@ Functions</h2></td></tr>
 <p>enable or disable activity </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3090,8 +3090,8 @@ Functions</h2></td></tr>
 <p>set the activity detect trigger mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">trigger</td><td>is the detect trigger mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trigger</td><td>detect trigger mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -3137,8 +3137,8 @@ Functions</h2></td></tr>
 <p>set the activity threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>is the set threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>activity threshold </td></tr>
   </table>
   </dd>
 </dl>
@@ -3185,8 +3185,8 @@ Functions</h2></td></tr>
 <p>set the activity time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tim</td><td>is the activity time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tim</td><td>activity time </td></tr>
   </table>
   </dd>
 </dl>
@@ -3232,8 +3232,8 @@ Functions</h2></td></tr>
 <p>enable or disable auto sleep </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3279,8 +3279,8 @@ Functions</h2></td></tr>
 <p>set the filter bandwidth </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bandwidth</td><td>is the filter bandwidth </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bandwidth</td><td>filter bandwidth </td></tr>
   </table>
   </dd>
 </dl>
@@ -3326,8 +3326,8 @@ Functions</h2></td></tr>
 <p>set the detect mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the set detect mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>detect mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -3373,8 +3373,8 @@ Functions</h2></td></tr>
 <p>set the fifo mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the fifo mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>fifo mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -3420,8 +3420,8 @@ Functions</h2></td></tr>
 <p>set the fifo sample </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sample</td><td>is the number of samples to store in the fifo </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sample</td><td>number of samples to store in the fifo </td></tr>
   </table>
   </dd>
 </dl>
@@ -3468,8 +3468,8 @@ Functions</h2></td></tr>
 <p>enable or disable saving temperature data to fifo </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3515,8 +3515,8 @@ Functions</h2></td></tr>
 <p>enable or disable inactivity </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3562,8 +3562,8 @@ Functions</h2></td></tr>
 <p>set the inactivity detect trigger mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">trigger</td><td>is the detect trigger mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trigger</td><td>detect trigger mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -3609,8 +3609,8 @@ Functions</h2></td></tr>
 <p>set the inactivity threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>is the set threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>inactivity threshold </td></tr>
   </table>
   </dd>
 </dl>
@@ -3657,8 +3657,8 @@ Functions</h2></td></tr>
 <p>set the inactivity time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tim</td><td>is the inactivity time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tim</td><td>inactivity time </td></tr>
   </table>
   </dd>
 </dl>
@@ -3704,8 +3704,8 @@ Functions</h2></td></tr>
 <p>set the interrupt pin1 active level </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>is the interrupt pin active level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>interrupt pin active level </td></tr>
   </table>
   </dd>
 </dl>
@@ -3751,8 +3751,8 @@ Functions</h2></td></tr>
 <p>enable or disable interrupt pin1 as the external clock </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3804,9 +3804,9 @@ Functions</h2></td></tr>
 <p>set the interrupt pin1 map </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>is the interrupt function map </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>interrupt function map </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3852,8 +3852,8 @@ Functions</h2></td></tr>
 <p>set the interrupt pin2 active level </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>is the interrupt pin active level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>interrupt pin active level </td></tr>
   </table>
   </dd>
 </dl>
@@ -3899,8 +3899,8 @@ Functions</h2></td></tr>
 <p>enable or disable interrupt pin2 as the external sampling trigger </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3952,9 +3952,9 @@ Functions</h2></td></tr>
 <p>set the interrupt pin2 map </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>is the interrupt function map </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>interrupt function map </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -4000,8 +4000,8 @@ Functions</h2></td></tr>
 <p>set the chip mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the chip mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>chip mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -4047,8 +4047,8 @@ Functions</h2></td></tr>
 <p>set the noise mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the noise mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>noise mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -4094,8 +4094,8 @@ Functions</h2></td></tr>
 <p>set the output data rate </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">odr</td><td>is the output data rate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">odr</td><td>output data rate </td></tr>
   </table>
   </dd>
 </dl>
@@ -4141,8 +4141,8 @@ Functions</h2></td></tr>
 <p>set the measurement range </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">range</td><td>is the measurement range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">range</td><td>measurement range </td></tr>
   </table>
   </dd>
 </dl>
@@ -4188,8 +4188,8 @@ Functions</h2></td></tr>
 <p>enable or disable the self test </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -4235,8 +4235,8 @@ Functions</h2></td></tr>
 <p>enable or disable chip wake up </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -4272,7 +4272,7 @@ Functions</h2></td></tr>
 <p>soft reset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an adxl362 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an adxl362 handle structure </td></tr>
   </table>
   </dd>
 </dl>

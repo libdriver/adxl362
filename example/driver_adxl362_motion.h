@@ -75,7 +75,7 @@ uint8_t adxl362_motion_irq_handler(void);
 
 /**
  * @brief     motion example init
- * @param[in] *callback points to a callback function
+ * @param[in] *callback pointer to a callback function
  * @return    status code
  *            - 0 success
  *            - 1 init failed
