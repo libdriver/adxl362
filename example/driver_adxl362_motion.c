@@ -69,6 +69,7 @@ uint8_t adxl362_motion_init(void (*callback)(uint8_t type))
 {
     uint8_t res;
     uint8_t reg_short;
+    uint8_t status;
     uint16_t reg;
     
     /* link interface function */
@@ -496,6 +497,16 @@ uint8_t adxl362_motion_init(void (*callback)(uint8_t type))
     if (res != 0)
     {
         adxl362_interface_debug_print("adxl362: set self test failed.\n");
+        (void)adxl362_deinit(&gs_handle);
+        
+        return 1;
+    }
+    
+    /* get status */
+    res = adxl362_get_status(&gs_handle, &status);
+    if (res != 0)
+    {
+        adxl362_interface_debug_print("adxl362: get status failed.\n");
         (void)adxl362_deinit(&gs_handle);
         
         return 1;

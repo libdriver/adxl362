@@ -186,6 +186,7 @@ static void a_adxl362_interface_receive_callback(uint8_t type)
 uint8_t adxl362_fifo_test(uint32_t times)
 {
     uint8_t res;
+    uint8_t status;
     uint32_t t;
     adxl362_info_t info;
 
@@ -603,7 +604,17 @@ uint8_t adxl362_fifo_test(uint32_t times)
 
         return 1;
     }
-
+    
+    /* get status */
+    res = adxl362_get_status(&gs_handle, &status);
+    if (res != 0)
+    {
+        adxl362_interface_debug_print("adxl362: get status failed.\n");
+        (void)adxl362_deinit(&gs_handle);
+        
+        return 1;
+    }
+    
     /* start measurement */
     res = adxl362_set_mode(&gs_handle, ADXL362_MODE_MEASUREMENT);
     if (res != 0)

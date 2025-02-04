@@ -134,6 +134,7 @@ uint8_t adxl362_motion_test(uint32_t times)
 {
     uint8_t res;
     uint8_t reg_short;
+    uint8_t status;
     uint16_t reg;
     uint32_t t;
     adxl362_info_t info;
@@ -588,6 +589,16 @@ uint8_t adxl362_motion_test(uint32_t times)
     if (res != 0)
     {
         adxl362_interface_debug_print("adxl362: set self test failed.\n");
+        (void)adxl362_deinit(&gs_handle);
+        
+        return 1;
+    }
+    
+    /* get status */
+    res = adxl362_get_status(&gs_handle, &status);
+    if (res != 0)
+    {
+        adxl362_interface_debug_print("adxl362: get status failed.\n");
         (void)adxl362_deinit(&gs_handle);
         
         return 1;
