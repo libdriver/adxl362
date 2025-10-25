@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['mainpage_2eh_270',['mainpage.h',['../mainpage_8h.html',1,'']]],
-  ['manufacturer_5fname_271',['manufacturer_name',['../structadxl362__info__s.html#ad25285dbf810c90f8eaf3fcef6f2b2ea',1,'adxl362_info_s']]],
-  ['manufacturer_5fname_272',['MANUFACTURER_NAME',['../driver__adxl362_8c.html#aaa2b8f5b105c3019df0cb346f472e803',1,'driver_adxl362.c']]],
-  ['max_5fcurrent_273',['MAX_CURRENT',['../driver__adxl362_8c.html#a2989837a37d6d63b59c6dd541b785435',1,'driver_adxl362.c']]],
-  ['max_5fcurrent_5fma_274',['max_current_ma',['../structadxl362__info__s.html#a9db82802561bf22d799b03a345f1d1dc',1,'adxl362_info_s']]]
+  ['inited_0',['inited',['../structadxl362__handle__s.html#a19bedf28d2b9748f6a62d9ae93f4e68f',1,'adxl362_handle_s']]],
+  ['interface_1',['interface',['../structadxl362__info__s.html#aebaa6c28dd4f2c3dc27566fcb910fd28',1,'adxl362_info_s']]],
+  ['interface_20driver_20function_2',['adxl362 interface driver function',['../group__adxl362__interface__driver.html',1,'']]]
 ];
