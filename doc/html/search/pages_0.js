@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['libdriver_20adxl362_548',['LibDriver ADXL362',['../index.html',1,'']]]
+  ['adxl362_0',['LibDriver ADXL362',['../index.html',1,'']]]
 ];
