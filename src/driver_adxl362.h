@@ -111,9 +111,9 @@ typedef enum
  */
 typedef enum
 {
-    ADXL362_NOISE_MODE_NORMAL          = 0x00,         /**< normal operation mode */
-    ADXL362_NOISE_MODE_LOW_NOISE       = 0x00,         /**< low noise mode */
-    ADXL362_NOISE_MODE_ULTRA_LOW_NOISE = 0x00,        /**< ultra low noise mode */
+    ADXL362_NOISE_MODE_NORMAL          = 0x00,        /**< normal operation mode */
+    ADXL362_NOISE_MODE_LOW_NOISE       = 0x01,        /**< low noise mode */
+    ADXL362_NOISE_MODE_ULTRA_LOW_NOISE = 0x02,        /**< ultra low noise mode */
 } adxl362_noise_mode_t;
 
 /**
