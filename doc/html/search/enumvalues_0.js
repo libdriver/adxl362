@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['adxl362_5fbandwidth_5fode_5fdiv_5f4_0',['ADXL362_BANDWIDTH_ODE_DIV_4',['../group__adxl362__basic__driver.html#gga260106940decccd98e8ac1d358b7d25aa6db12d3fff43ecf4a8b3dbe6c6ee449a',1,'driver_adxl362.h']]],
-  ['adxl362_5fbandwidth_5fodr_5fdiv_5f2_1',['ADXL362_BANDWIDTH_ODR_DIV_2',['../group__adxl362__basic__driver.html#gga260106940decccd98e8ac1d358b7d25aa1ad540013dfff5c2a017705b4198ff4a',1,'driver_adxl362.h']]],
+  ['adxl362_5fbandwidth_5fodr_5fdiv_5f2_0',['ADXL362_BANDWIDTH_ODR_DIV_2',['../group__adxl362__basic__driver.html#gga260106940decccd98e8ac1d358b7d25aa1ad540013dfff5c2a017705b4198ff4a',1,'driver_adxl362.h']]],
+  ['adxl362_5fbandwidth_5fodr_5fdiv_5f4_1',['ADXL362_BANDWIDTH_ODR_DIV_4',['../group__adxl362__basic__driver.html#gga260106940decccd98e8ac1d358b7d25aacf9b2806960dd82820c991f11904c9d5',1,'driver_adxl362.h']]],
   ['adxl362_5fbool_5ffalse_2',['ADXL362_BOOL_FALSE',['../group__adxl362__basic__driver.html#ggab660dbc9deffbfb3855911d951190213a0f7f0f8cbca80717fd611855f87fc305',1,'driver_adxl362.h']]],
   ['adxl362_5fbool_5ftrue_3',['ADXL362_BOOL_TRUE',['../group__adxl362__basic__driver.html#ggab660dbc9deffbfb3855911d951190213ae527fbef0b2ede2fd2fa598175415538',1,'driver_adxl362.h']]],
   ['adxl362_5fdetect_5fmode_5fboth_4',['ADXL362_DETECT_MODE_BOTH',['../group__adxl362__basic__driver.html#gga06c94b1d97e2e5e9620d9099ea2bf9f1ae9b7ba309b0f70bfd5d5c5c997e1f847',1,'driver_adxl362.h']]],

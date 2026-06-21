@@ -90,7 +90,7 @@ typedef enum
 typedef enum
 {
     ADXL362_BANDWIDTH_ODR_DIV_2 = 0x00,        /**< 1/2 odr */
-    ADXL362_BANDWIDTH_ODE_DIV_4 = 0x01,        /**< 1/4 odr */
+    ADXL362_BANDWIDTH_ODR_DIV_4 = 0x01,        /**< 1/4 odr */
 } adxl362_bandwidth_t;
 
 /**

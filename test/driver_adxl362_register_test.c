@@ -1123,7 +1123,7 @@ uint8_t adxl362_register_test(void)
     adxl362_interface_debug_print("adxl362: check bandwidth %s.\n", (bandwidth == ADXL362_BANDWIDTH_ODR_DIV_2) ? "ok" : "error");
     
     /* 1/4 odr */
-    res = adxl362_set_bandwidth(&gs_handle, ADXL362_BANDWIDTH_ODE_DIV_4);
+    res = adxl362_set_bandwidth(&gs_handle, ADXL362_BANDWIDTH_ODR_DIV_4);
     if (res != 0)
     {
         adxl362_interface_debug_print("adxl362: set bandwidth failed.\n");
@@ -1142,7 +1142,7 @@ uint8_t adxl362_register_test(void)
         
         return 1;
     }
-    adxl362_interface_debug_print("adxl362: check bandwidth %s.\n", (bandwidth == ADXL362_BANDWIDTH_ODE_DIV_4) ? "ok" : "error");
+    adxl362_interface_debug_print("adxl362: check bandwidth %s.\n", (bandwidth == ADXL362_BANDWIDTH_ODR_DIV_4) ? "ok" : "error");
     
     /* adxl362_set_interrupt_pin2_as_external_sampling_trigger/adxl362_get_interrupt_pin2_as_external_sampling_trigger test */
     adxl362_interface_debug_print("adxl362: adxl362_set_interrupt_pin2_as_external_sampling_trigger/adxl362_get_interrupt_pin2_as_external_sampling_trigger test.\n");
