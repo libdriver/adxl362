@@ -33,7 +33,7 @@ var group__adxl362__basic__driver =
     [ "adxl362_info_t", "group__adxl362__basic__driver.html#ga3713e7351fdac21d3ebbcbf6cbac96ef", null ],
     [ "adxl362_bandwidth_t", "group__adxl362__basic__driver.html#ga260106940decccd98e8ac1d358b7d25a", [
       [ "ADXL362_BANDWIDTH_ODR_DIV_2", "group__adxl362__basic__driver.html#gga260106940decccd98e8ac1d358b7d25aa1ad540013dfff5c2a017705b4198ff4a", null ],
-      [ "ADXL362_BANDWIDTH_ODE_DIV_4", "group__adxl362__basic__driver.html#gga260106940decccd98e8ac1d358b7d25aa6db12d3fff43ecf4a8b3dbe6c6ee449a", null ]
+      [ "ADXL362_BANDWIDTH_ODR_DIV_4", "group__adxl362__basic__driver.html#gga260106940decccd98e8ac1d358b7d25aacf9b2806960dd82820c991f11904c9d5", null ]
     ] ],
     [ "adxl362_bool_t", "group__adxl362__basic__driver.html#gab660dbc9deffbfb3855911d951190213", [
       [ "ADXL362_BOOL_FALSE", "group__adxl362__basic__driver.html#ggab660dbc9deffbfb3855911d951190213a0f7f0f8cbca80717fd611855f87fc305", null ],

@@ -550,7 +550,7 @@ uint8_t adxl362_get_fifo_counter(adxl362_handle_t *handle, uint16_t *counter)
         return 1;                                                            /* return error */
     }
     *counter = (uint16_t)(((uint16_t)buf[1]) << 8) | buf[0];                 /* set the counter */
-    *counter = (*counter) & 0x200;                                           /* get the valid part */
+    *counter = (*counter) & 0x3FF;                                           /* get the valid part */
     
     return 0;                                                                /* success return 0 */
 }
@@ -797,10 +797,10 @@ uint8_t adxl362_set_fifo_sample(adxl362_handle_t *handle, uint16_t sample)
     }
     prev &= ~(1 << 3);                                                        /* clear settings */
     prev |= (((sample >> 8) & 0x01) << 3);                                    /* set the bit 8 */
-    res = a_adxl362_write(handle, ADXL362_REG_FIFO_SAMPLES, &prev, 1);        /* write fifo control */
+    res = a_adxl362_write(handle, ADXL362_REG_FIFO_CONTROL, &prev, 1);        /* write fifo control */
     if (res != 0)                                                             /* check the result */
     {
-        handle->debug_print("adxl362: write fifo samples failed.\n");         /* write fifo samples failed */
+        handle->debug_print("adxl362: write fifo control failed.\n");         /* write fifo control failed */
        
         return 1;                                                             /* return error */
     }
@@ -3328,10 +3328,7 @@ uint8_t adxl362_read_fifo(adxl362_handle_t *handle, adxl362_frame_t *frame, uint
         return 1;                                                          /* return error */
     }
     len = (uint16_t)((uint16_t)buf[1] << 8) | buf[0];                      /* set the length */
-    if (len > 512)                                                         /* check the length */
-    {
-        len = 512;                                                         /* set limit to 512 */
-    }
+    len &= 0x3FF;                                                          /* mask the length */
     res = a_adxl362_read(handle, ADXL362_REG_FIFO_CONTROL, &prev, 1);      /* read fifo control */
     if (res != 0)                                                          /* check the result */
     {
@@ -3370,9 +3367,9 @@ uint8_t adxl362_read_fifo(adxl362_handle_t *handle, adxl362_frame_t *frame, uint
                         handle->buf[i * 2];                                /* get the raw data */
         type = (frame[i].raw >> 14) & 0x03;                                /* get the type */
         frame[i].raw &= 0x3FFF;                                            /* get the valid part */
-        if (((frame[i].raw >> 12) & 0x01) != 0)                            /* check the sign extension */
+        if ((frame[i].raw & 0x0800U) != 0)                                 /* check the sign extension */
         {
-            frame[i].raw |= (int16_t)((uint16_t)0x3 << 14);                /* set the sign extension */
+            frame[i].raw |= 0xF000U;                                       /* set the sign extension */
         }
         frame[i].type = (adxl362_frame_type_t)(type);                      /* get the type */
         if (frame[i].type == ADXL362_FRAME_TYPE_TEMP)                      /* if temperature */
