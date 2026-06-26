@@ -435,9 +435,9 @@ uint8_t adxl362_read_8msb(adxl362_handle_t *handle, int8_t raw[3], float g[3])
     }
     else                                                                   /* 8g */
     {
-        g[0] = (float)raw[0] * 16.0f / 235.0f;                             /* convert x */
-        g[1] = (float)raw[1] * 16.0f / 235.0f;                             /* convert y */
-        g[2] = (float)raw[2] * 16.0f / 235.0f;                             /* convert z */
+        g[0] = (float)raw[0] * 16.0f / 250.0f;                             /* convert x */
+        g[1] = (float)raw[1] * 16.0f / 250.0f;                             /* convert y */
+        g[2] = (float)raw[2] * 16.0f / 250.0f;                             /* convert z */
     }
     
     return 0;                                                              /* success return 0 */
@@ -2148,7 +2148,7 @@ uint8_t adxl362_activity_threshold_convert_to_register(adxl362_handle_t *handle,
     }
     else                                                                   /* 8g */
     {
-        *reg = (uint16_t)(g * 235.0f);                                     /* convert data */
+        *reg = (uint16_t)(g * 250.0f);                                     /* convert data */
     }
     
     return 0;                                                              /* success return 0 */
@@ -2198,7 +2198,7 @@ uint8_t adxl362_activity_threshold_convert_to_data(adxl362_handle_t *handle, uin
     }
     else                                                                   /* 8g */
     {
-        *g = (float)((float)reg / 235.0f);                                 /* convert data */
+        *g = (float)((float)reg / 250.0f);                                 /* convert data */
     }
     
     return 0;                                                              /* success return 0 */
@@ -2543,7 +2543,7 @@ uint8_t adxl362_inactivity_threshold_convert_to_register(adxl362_handle_t *handl
     }
     else                                                                   /* 8g */
     {
-        *reg = (uint16_t)(g * 235.0f);                                     /* convert data */
+        *reg = (uint16_t)(g * 250.0f);                                     /* convert data */
     }
     
     return 0;                                                              /* success return 0 */
@@ -2593,7 +2593,7 @@ uint8_t adxl362_inactivity_threshold_convert_to_data(adxl362_handle_t *handle, u
     }
     else                                                                   /* 8g */
     {
-        *g = (float)((float)reg / 235.0f);                                 /* convert data */
+        *g = (float)((float)reg / 250.0f);                                 /* convert data */
     }
     
     return 0;                                                              /* success return 0 */
@@ -3281,9 +3281,9 @@ uint8_t adxl362_read(adxl362_handle_t *handle, int16_t raw[3], float g[3])
         raw[0] = (int16_t)((uint16_t)(buf[1]) << 8 | buf[0]);              /* set x */
         raw[1] = (int16_t)((uint16_t)(buf[3]) << 8 | buf[2]);              /* set y */
         raw[2] = (int16_t)((uint16_t)(buf[5]) << 8 | buf[4]);              /* set z */
-        g[0] = (float)raw[0] / 235.0f;                                     /* convert x */
-        g[1] = (float)raw[1] / 235.0f;                                     /* convert y */
-        g[2] = (float)raw[2] / 235.0f;                                     /* convert z */
+        g[0] = (float)raw[0] / 250.0f;                                     /* convert x */
+        g[1] = (float)raw[1] / 250.0f;                                     /* convert y */
+        g[2] = (float)raw[2] / 250.0f;                                     /* convert z */
     }
     
     return 0;                                                              /* success return 0 */
@@ -3388,7 +3388,7 @@ uint8_t adxl362_read_fifo(adxl362_handle_t *handle, adxl362_frame_t *frame, uint
             }
             else                                                           /* 8g */
             {
-                frame[i].data = (float)frame[i].raw / 235.0f;              /* convert data */
+                frame[i].data = (float)frame[i].raw / 250.0f;              /* convert data */
             }
         }
     }
